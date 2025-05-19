@@ -260,7 +260,7 @@ export default function Navbar() {
               setOpenLocation((prev) => !prev);
               setOpenCategory(false);
             }}
-            className="flex gap-1 items-center justify-around px-6 py-2 border border-green-300 rounded-md cursor-pointer text-lg text-gray-700 bg-white w-full"
+            className="flex gap-1 items-center justify-around px-4 py-2 border border-green-300 rounded-md cursor-pointer text-lg text-gray-700 bg-white w-full"
           >
             <div className="flex items-center space-x-2 p-4 h-10">
               <MapPin size={20} className="text-green-600 p-2" />
