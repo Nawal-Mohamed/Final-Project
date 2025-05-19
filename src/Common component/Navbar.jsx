@@ -1,5 +1,4 @@
-"use client";
-
+import React from "react";
 import { useState, useEffect } from "react";
 import { CiSearch } from "react-icons/ci";
 import {
@@ -13,6 +12,7 @@ import {
   X,
   Home,
 } from "lucide-react";
+import Menulist from "./Menulist";
 
 export default function Navbar() {
   const [openCategory, setOpenCategory] = useState(false);
@@ -191,7 +191,7 @@ export default function Navbar() {
         </div>
 
         {/* Category Search Bar - Hidden on mobile, visible on medium and large screens */}
-        <div className="cat_search  hidden md:hidden lg:flex order-3 lg:order-2 gap-2 items-center border border-green-200 rounded-md px-4 lg:px-6 py-3 lg:py-4 w-full md:w-auto md:max-w-xl shadow-sm mt-4 md:mt-0">
+        <div className="cat_search  hidden md:hidden lg:flex order-3 lg:order-2 gap-2 items-center border border-green-300 rounded-md px-4 lg:px-6 py-3 lg:py-4 w-full md:w-auto md:max-w-xl shadow-sm mt-4 md:mt-0">
           <div className="relative w-100 h-10 ">
             <button
               onClick={() => {
@@ -260,7 +260,7 @@ export default function Navbar() {
               setOpenLocation((prev) => !prev);
               setOpenCategory(false);
             }}
-            className="flex gap-1 items-center justify-around px-6 py-2 border border-green-200 rounded-md cursor-pointer text-lg text-gray-700 bg-white"
+            className="flex gap-1 items-center justify-around px-6 py-2 border border-green-300 rounded-md cursor-pointer text-lg text-gray-700 bg-white w-full"
           >
             <div className="flex items-center space-x-2 p-4 h-10">
               <MapPin size={20} className="text-green-600 p-2" />
@@ -329,6 +329,8 @@ export default function Navbar() {
           ))}
         </div>
       </div>
+      <hr></hr>
+      <Menulist />
     </>
   );
 }
