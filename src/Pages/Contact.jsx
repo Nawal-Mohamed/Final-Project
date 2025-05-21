@@ -1,12 +1,10 @@
 import React from "react";
 import Navbar from "../Common component/Navbar";
-import Banner from "../component/Banner";
 
-export default function Home() {
+export default function Contact() {
   return (
     <>
       <Navbar />
-      <Banner />
     </>
   );
 }
