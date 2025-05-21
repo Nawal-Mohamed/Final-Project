@@ -1,5 +1,5 @@
 import React from 'react';
-import AnimationCard from '../../wrapper-components/Footer/AnimationCard';
+import AnimationCard from '../../Wrapper Components/AnimationCard';
 import { IoLocationOutline } from 'react-icons/io5';
 import { CiClock2, CiHeadphones } from 'react-icons/ci';
 import { BsSend } from 'react-icons/bs';

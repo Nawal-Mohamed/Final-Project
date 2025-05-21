@@ -1,14 +1,14 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaPinterestP, FaYoutube } from 'react-icons/fa';
 import { FiPhoneCall } from 'react-icons/fi';
-import AnimationCard from '../../wrapper-components/Footer/AnimationCard';
+import AnimationCard from '../../Wrapper Components/AnimationCard';
 
 export default function FooterBottom() {
     return (
         <div className="border-t relative left-5 w-[97%] border-green-200 py-10 px-2 md:px-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 bg-white">
 
             {/* 1 - حقوق الملكية */}
-            <AnimationCard>
+            <AnimationCard> 
                 <div className="mb-4 md:mb-0 text-center md:text-left">
                     <p className='text-md text-[#7e7e7e]'>© 2024, <span className="font-medium text-md text-green-500">Nest</span> - HTML Ecommerce Template</p>
                     <p className='text-md text-[#7e7e7e]'>All rights reserved</p>
