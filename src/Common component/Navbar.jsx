@@ -13,6 +13,7 @@ import {
   Home,
 } from "lucide-react";
 import Menulist from "./Menulist";
+import Banner from "../component/Banner";
 
 export default function Navbar() {
   const [openCategory, setOpenCategory] = useState(false);
@@ -177,7 +178,7 @@ export default function Navbar() {
       <div className="nav_container m-15! flex flex-wrap justify-between lg:justify-around items-center p-4 lg:p-0">
         {/* Logo - Always visible, positioned on the left for mobile */}
         <div className="nav_logo order-1">
-          <img src="assets/logo.svg" alt="logo" className="h-10" />
+          <img src="assets/logo.svg" alt="logo" className="h-15" />
         </div>
 
         {/* Mobile Menu Button - Only visible on mobile and tablet, positioned on the right */}
@@ -331,6 +332,7 @@ export default function Navbar() {
       </div>
       <hr></hr>
       <Menulist />
+      <Banner />
     </>
   );
 }
