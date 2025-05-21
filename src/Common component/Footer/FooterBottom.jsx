@@ -5,7 +5,7 @@ import AnimationCard from '../../Wrapper Components/AnimationCard';
 
 export default function FooterBottom() {
     return (
-        <div className="border-t relative left-5 w-[97%] border-green-200 py-10 px-2 md:px-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 bg-white">
+        <div className="border-t relative left-5 w-[97%] border-green-200 my-2 py-10 px-2 md:px-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 bg-white">
 
             {/* 1 - حقوق الملكية */}
             <AnimationCard> 

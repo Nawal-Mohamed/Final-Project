@@ -30,7 +30,7 @@ export default function AwesomeGrocery() {
     ];
 
     return (
-        <div className="grid justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-17 gap-5 h-100 pr-10 my-15 h-full">
+        <div className="grid justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-17 gap-5  pr-10 my-5 h-full">
             <div className="col-span-5">
                 <AnimationCard index={0}>
                     <div className=" px-2 rounded">
@@ -89,7 +89,7 @@ export default function AwesomeGrocery() {
 
                             <div className='payment-ways my-13'>
                                 <p>Secured Payment Gateways</p>
-                                <img src="assets/payment-method (1).png" alt="" className='my-7' />
+                                <img src="assets/payment-method.png" alt="" className='my-7' />
                             </div>
                         </div>
 

@@ -30,7 +30,7 @@ export default function StayHomeFooter() {
             initial={{ opacity: 0, y: 60 }}
             animate={controls}
         >
-            <div className='StayHome-main lg:w-full md:w-185 sm:w-155 lg:h-110 md:h-120 sm:h-150 flex  justify-between items-center  bg-[#d2faf7] ml-5  mr-20 md:mr-18 sm:mr-20  rounded-xl p-20 md:p-12 sm:p-10  relative'>
+            <div className='StayHome-main lg:w-[97%] md:w-185 sm:w-155 lg:h-110 md:h-120 sm:h-150 flex  justify-between items-center  bg-[#d2faf7] ml-5  mr-20 md:mr-18 sm:mr-20  rounded-xl p-20 md:p-12 sm:p-10  relative'>
                 <div className='side-left w-[60%] pt-15'>
                     <h1 className=' lg:text-5xl md:text-lg sm:text-xs sm:font-medium md:font-medium lg:font-bold text-[#253d4e]'>Stay home & get your daily needs from our shop</h1>
                     <p className='m-5 font-normal text-xl text-gray-500 '>Start You'r Daily Shopping with <span className='text-green-500 font-medium  md:text-lg'>Nest Mart</span></p>
