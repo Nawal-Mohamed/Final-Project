@@ -1,10 +1,10 @@
 import React from "react";
-import StayHomeFooter from "./StayHomeFooter.jsx";
-import BestOffers from "./BestOffers.jsx";
-import { BestOfferFooter } from "../../DataArrays/dataFooter/BestOfferFooter.js";
+import StayHomeFooter from "../component/Footer/StayHomeFooter.jsx";
+import BestOffers from "../component/Footer/BestOffers.jsx";
+import { BestOfferFooter } from "../DataArrays/dataFooter/BestOfferFooter.js";
 import { motion } from "framer-motion";
-import AwesomeGrocery from "./AwesomeGrocery.jsx";
-import FooterBottom from "./FooterBottom.jsx";
+import AwesomeGrocery from "../component/Footer/AwesomeGrocery.jsx";
+import FooterBottom from "../component/Footer/FooterBottom.jsx";
 
 export default function FooterMain() {
   return (

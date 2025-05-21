@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./Pages/Home";
-import FooterMain from "./Common component/Footer/FooterMain";
+import FooterMain from "./Common component/FooterMain";
 
 export default function App() {
   return (
