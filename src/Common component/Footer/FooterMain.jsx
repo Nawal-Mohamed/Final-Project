@@ -1,7 +1,7 @@
 import React from 'react'
 import StayHomeFooter from './StayHomeFooter.jsx';
 import BestOffers from './BestOffers.jsx';
-import { BestOfferFooter } from '../../DataArrayes/dataFooter/BestOfferFooter.js';
+import { BestOfferFooter } from '../../DataArrays/dataFooter/BestOfferFooter.js';
 import { motion } from "framer-motion";
 import AwesomeGrocery from './AwesomeGrocery.jsx';
 import FooterBottom from './FooterBottom.jsx';
