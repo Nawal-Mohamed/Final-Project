@@ -23,19 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-
-# Ignore Windows system folders
-AppData/
-Application Data/
-Local Settings/
-My Documents/
-NTUSER.*
-*.regtrans-ms
-*.blf
-*.ini
-*.LOG*
-Cookies/
-Recent/
-SendTo/
-Start Menu/
-Templates/
