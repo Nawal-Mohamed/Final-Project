@@ -17,7 +17,7 @@ export default function FooterBottom() {
 
             {/* 2 - أرقام الدعم */}
             <AnimationCard>
-                <div className="mb-4 md:mb-0 flex flex-col items-center md:items-start">
+                <div className="mb-4 md:mb-0  flex-col items-center md:items-start  hidden lg:flex">
                     <div className="flex items-center gap-2">
 
                         <FiPhoneCall className="text-gray-400" size={40} />
