@@ -1,18 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaHeadphonesAlt } from "react-icons/fa";
 
 export default function Menulist() {
   return (
     <>
       <div className="menulist-cont flex justify-between p-2 sm:mx-1 xl:mx-25">
-        <ul className="flex gap-7 text-xl items-center">
+        <ul className="gap-3 sm:gap-7 flex text-xl items-center sm:text-lg">
           <li>
-            <a
-              href="#"
+            <Link
+              to="/Home"
               className="hover:text-green-500 duration-400 ease-in-out font-semibold"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
             <a
@@ -39,6 +40,23 @@ export default function Menulist() {
             >
               Contact
             </a>
+          </li>
+
+          <li>
+            <Link
+              to="/login"
+              className="hover:text-green-500 duration-400 ease-in-out font-semibold"
+            >
+              Login
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/Register"
+              className="hover:text-green-500 duration-400 ease-in-out font-semibold"
+            >
+              Register
+            </Link>
           </li>
         </ul>
 
