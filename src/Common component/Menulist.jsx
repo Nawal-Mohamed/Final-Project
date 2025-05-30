@@ -16,12 +16,12 @@ export default function Menulist() {
             </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              to="/About"
               className="hover:text-green-500 duration-400 ease-in-out font-semibold"
             >
               About
-            </a>
+            </Link>
           </li>
 
           <li>
