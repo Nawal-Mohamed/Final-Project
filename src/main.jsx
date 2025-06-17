@@ -1,7 +1,7 @@
 import React from "react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./Style/style.css";
+import  "./Style/style.css";
 import App from "./App.jsx";
 import ReactDOM from "react-dom/client";
 import "slick-carousel/slick/slick.css";

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
-import Navbar from "../Common component/Navbar";
+import Navbar from "../CommonComponent/Navbar";
 
 // Security Code Component
 const SecurityCode = ({ onCodeChange }) => {
