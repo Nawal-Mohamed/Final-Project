@@ -22,11 +22,10 @@ export default function PopularProducts() {
 
     return (
         < >
-            <div className="my-20 mx-5">
-
-           
-            <div className="flex justify-between text-center">
-                    <h1 className="font-semibold text-4xl my-10 text-gray-700">Popular Products</h1>
+            <div className="my-20 mx-4 sm:mx-6 md:mx-10">
+                {/* العنوان + قائمة التصنيفات */}
+                <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-10">
+                    <h1 className="font-semibold text-3xl sm:text-4xl text-gray-700">Popular Products</h1>
                     <CategoriesMenu
                         categories={categories}
                         selectedCategory={selectedCategory}

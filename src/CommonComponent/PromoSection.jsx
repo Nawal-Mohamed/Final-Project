@@ -1,43 +1,35 @@
-// src/components/PromoSection.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import AnimationCard from '../Wrapper Components/AnimationCard'; 
+import AnimationCard from "../Wrapper Components/AnimationCard";
 
 const cards = [
     {
         title: "Everyday Fresh & Clean with Our Products",
         bgImage: "/assets/banner-1.png",
-        // bgColor: "bg-yellow-100",
     },
     {
-        title: "Make your Breakfast  Healthy and Easy",
+        title: "Make your Breakfast Healthy and Easy",
         bgImage: "/assets/banner-2.png",
-        // bgColor: "bg-pink-100",
     },
     {
         title: "The best Organic Products Online",
         bgImage: "/assets/banner-3.png",
-        // bgColor: "bg-blue-100",
     },
 ];
 
 export default function PromoSection() {
     return (
-        <div className="flex gap-6 justify-center my-20 p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-8 xl:px-16 my-20">
             {cards.map((card, id) => (
                 <AnimationCard key={id} index={id}>
                     <div
-                        className={`relative flex items-center justify-between rounded-xl p-6 w-100 max-w-md overflow-hidden`}
+                        className="relative rounded-xl p-6 h-full min-h-[220px] flex items-center bg-cover bg-right transition-all"
                         style={{
                             backgroundImage: `url(${card.bgImage})`,
-                            backgroundSize: "cover",
-                            backgroundPosition: "right center",
                         }}
                     >
-                        <div className="absolute z-0"></div>
-
-                        <div className="relative z-10 w-60 h-50 group">
-                            <h3 className="h-30 py-4 text-xl font-semibold text-gray-800 mb-4 transition-transform duration-500 ease-in-out group-hover:-translate-y-2">
+                        <div className="relative z-10 w-60 group">
+                            <h3 className="text-lg font-semibold text-gray-800 mb-4 transition-transform duration-500 ease-in-out group-hover:-translate-y-2">
                                 {card.title}
                             </h3>
                             <Link

@@ -106,7 +106,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4 lg:p-8">
         <div className="w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden">
           <div className="flex flex-col lg:flex-row min-h-[600px]">

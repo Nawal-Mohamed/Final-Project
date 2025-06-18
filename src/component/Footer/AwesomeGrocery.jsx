@@ -6,10 +6,7 @@ import { BsSend } from 'react-icons/bs';
 import { FaApple, FaGooglePlay } from 'react-icons/fa';
 import FooterLinksColumn from './FooterLinksColumn';
 
-
-
 export default function AwesomeGrocery() {
-
     const footerLinks = [
         {
             title: "Company",
@@ -30,89 +27,85 @@ export default function AwesomeGrocery() {
     ];
 
     return (
-        <div className="grid  grid-cols-17 gap-5  pr-10 my-5 h-full">
-            <div className="lg:col-span-5 md:col-span-7 sm:col-span-9 ">
-                <AnimationCard index={0}>
-                    <div className=" px-2 rounded">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-5 p-4 w-full">
 
+            {/* العمود الأساسي */}
+            <div className="col-span-1 md:col-span-1 lg:col-span-2 xl:col-span-2">
+                <AnimationCard index={0}>
+                    <div className="px-2 rounded">
                         <div className='first-div'>
                             <a href="#"><img src="/assets/logo.svg" alt="" /></a>
                             <h2 className='mt-5'>Awesome grocery store website template</h2>
                         </div>
 
-                        <div className='div-location flex justify- gap-1  mt-5 '>
+                        <div className='flex gap-1 mt-5'>
                             <IoLocationOutline className='text-green-500' size={20} />
-                            <h2><span className='font-semibold'>Address:</span> 5171 W Campbell Ave <br /> undefined Kent, Utah 53127 United States              </h2>
+                            <h2><span className='font-semibold'>Address:</span> 5171 W Campbell Ave <br /> Kent, Utah 53127 United States</h2>
                         </div>
 
-                        <div className='div-location flex justify- gap-1  mt-5 '>
-                            <CiHeadphones className='text-green-500 ' size={20} />
-                            <h2><span className='font-semibold'>Call Us:</span>(+91) - 540-025-124553</h2>
+                        <div className='flex gap-1 mt-5'>
+                            <CiHeadphones className='text-green-500' size={20} />
+                            <h2><span className='font-semibold'>Call Us:</span> (+91) - 540-025-124553</h2>
                         </div>
 
-
-                        <div className='div-location flex justify- gap-1  mt-5 '>
+                        <div className='flex gap-1 mt-5'>
                             <BsSend className='text-green-500' size={20} />
-                            <h2><span className='font-semibold'>Email:</span>sale@Nest.com</h2>
+                            <h2><span className='font-semibold'>Email:</span> sale@Nest.com</h2>
                         </div>
 
-                        <div className='div-location flex justify- gap-1  mt-5 '>
+                        <div className='flex gap-1 mt-5'>
                             <CiClock2 className='text-green-500' size={20} />
-                            <h2><span className='font-semibold'>Hours:</span>10:00 - 18:00, Mon - Sat</h2>
+                            <h2><span className='font-semibold'>Hours:</span> 10:00 - 18:00, Mon - Sat</h2>
                         </div>
-
-
-  
                     </div>
                 </AnimationCard>
             </div>
 
+            {/* أعمدة الروابط */}
             {footerLinks.map((section, index) => (
-                <div className="lg:col-span-3 md:col-span-5 sm:col-span-7   ">
+                <div key={index} className="col-span-1">
                     <AnimationCard index={index + 1}>
                         <FooterLinksColumn title={section.title} links={section.links} />
                     </AnimationCard>
                 </div>
             ))}
-                <div className='installApp-main col-span-5'>
-            <AnimationCard>
 
+            {/* تطبيقات ومتجر */}
+            <div className="col-span-2 md:col-span-3 lg:col-span-2 xl:col-span-2">
+                <AnimationCard>
                     <div className='installApp-title my-1'>
                         <h2 className='font-bold text-3xl my-3'>Install App</h2>
                         <p>From App Store or Google Play</p>
                     </div>
 
-                    <div className='installApp my-5 flex gap-10 '>
+                    <div className='installApp my-5 flex flex-wrap gap-4'>
+                        <div className='appStore bg-black p-2 w-40 rounded-md transition-transform duration-300 hover:-translate-y-2'>
+                            <a href="https://www.apple.com/eg-ar/app-store/" className='text-white flex gap-2'>
+                                <FaApple size={30} />
+                                <div>
+                                    <p className='text-gray-400 text-sm'>Download on the</p>
+                                    <p className='text-white text-sm'>App Store</p>
+                                </div>
+                            </a>
+                        </div>
 
-                        <div className='appStore bg-black  p-1 w-40 rounded-md transition-transform duration-300 hover:-translate-y-2'>
-                            <a href="https://www.apple.com/eg-ar/app-store/" className='text-white flex gap-1'>
-                                <FaApple size={30} className='text-white' />
-                                <p className='text-gray-500 text-sm'>Download on the
-                                    <br />
-                                    <p className='text-white text-sm'>AppStore</p>
-                                </p>
-                            </a></div>
-
-
-                        <div className='googlePlay bg-black  p-1 w-40 rounded-md transition-transform duration-300 hover:-translate-y-2'>
-                            <a href="https://play.google.com/store/games?device=windows&pli=1" className='text-white flex gap-1'>
-                                <FaGooglePlay size={30} className='text-white color-green-500 ' />
-                                <p className='text-gray-500 text-sm'>GET iT ON
-                                    <br />
+                        <div className='googlePlay bg-black p-2 w-40 rounded-md transition-transform duration-300 hover:-translate-y-2'>
+                            <a href="https://play.google.com/store" className='text-white flex gap-2'>
+                                <FaGooglePlay size={30} />
+                                <div>
+                                    <p className='text-gray-400 text-sm'>GET IT ON</p>
                                     <p className='text-white text-sm'>Google Play</p>
-                                </p>
-                            </a></div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
 
-                    <div className='payment-ways my-13'>
+                    <div className='payment-ways mt-10'>
                         <p>Secured Payment Gateways</p>
-                        <img src="/assets/payment-method.png" alt="" className='my-7' />
+                        <img src="/assets/payment-method.png" alt="Payment Methods" className='mt-4' />
                     </div>
-            </AnimationCard>
-                </div>
-        
-
-
+                </AnimationCard>
+            </div>
         </div>
     );
 }

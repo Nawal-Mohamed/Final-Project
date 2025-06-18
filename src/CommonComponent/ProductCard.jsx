@@ -6,7 +6,7 @@ export default function ProductCard  ({ product }) {
     const secondImage = getStrapiMedia(product?.image?.[1]?.url);
 
     return (
-        <div className="group relative  p-4 border rounded-2xl shadow-md hover:shadow-lg transition-all bg-white cursor-pointer">
+        <div className="w-full sm:rounded-lg sm:shadow-md sm:p-4 p-0 m-0">
             {/* Badge */}
             {product.badge && (
                 <span className="absolute  top-2 left-2 px-3 py-1 text-white text-xs rounded-full bg-pink-500">

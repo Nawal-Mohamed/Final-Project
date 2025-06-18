@@ -11,14 +11,14 @@ const ProductCardStrapi = ({ product, onAddToCart }) => {
     const image2 = hasImages ? getStrapiMedia(product.image[1]?.url) : "";
 
     return (
-        <div className="p-2 rounded-2xl border border-gray-200 shadow-md relative text-left">
+        <div className="p-2 rounded-2xl border border-gray-200 shadow-md relative text-center md:text-left"> {/* تغيير text-left إلى text-center مع md:text-left */}
             {product.badge && (
                 <span className="absolute z-3 w-17 h-9 top-0 left-0 bg-red-500 text-white p-5 py-2 rounded-tl-2xl rounded-br-3xl text-sm">
                     {product.badge}
                 </span>
             )}
 
-            <div className="overflow-hidden rounded-xl group w-30 md:w-48 lg:w-53 h-25 md:h-36 flex justify-center items-center">
+            <div className="overflow-hidden rounded-xl group w-30 md:w-48 lg:w-53 h-25 md:h-36 flex justify-center items-center mx-auto"> {/* إضافة mx-auto */}
                 {hasImages ? (
                     <ImageHoverSwitcher images={product.image} title={product.title} />
                 ) : (
@@ -31,14 +31,14 @@ const ProductCardStrapi = ({ product, onAddToCart }) => {
             </div>
 
             {/* Title */}
-            <div className="p-3">
+            <div className="p-3 text-center md:text-left"> {/* تغيير text-left إلى text-center مع md:text-left */}
                 {product.category?.title && (
                     <p className="text-sm text-gray-500 mb-3">{product.category.title}</p>
                 )}
                 <h2 className="font-semibold text-lg mb-3">{product.title}</h2>
 
                 {/* Rating */}
-                <div className="flex items-center gap-2 mb-3">
+                <div className="flex items-center justify-center md:justify-start gap-2 mb-3"> {/* إضافة justify-center مع md:justify-start */}
                     <StarRatings
                         rating={product.rating || 0}
                         starRatedColor="gold"
@@ -54,8 +54,8 @@ const ProductCardStrapi = ({ product, onAddToCart }) => {
                     <h2 className="text-[#4fa56d] font-medium inline-block">{product.by}</h2>
                 </div>
 
-                <div className="flex items-center gap-5 mb-3">
-                    <div className="flex flex-col">
+                <div className="flex items-center justify-center md:justify-start gap-5 mb-3"> {/* إضافة justify-center مع md:justify-start */}
+                    <div className="flex flex-col items-center md:items-start"> {/* إضافة items-center مع md:items-start */}
                         <span className="text-green-600 font-bold text-base">${product.price}</span>
                         {product.originalPrice && (
                             <span className="text-gray-500 line-through text-sm">

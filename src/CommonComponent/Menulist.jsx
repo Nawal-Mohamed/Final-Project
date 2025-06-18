@@ -44,6 +44,27 @@ export default function Menulist() {
                             Contact
                         </Link>
                     </li>
+
+                    <li>
+                        <Link
+                            to="/login"
+                            className="hover:text-green-500 duration-400 ease-in-out font-semibold"
+                        >
+                            Login
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/Register"
+                            className="hover:text-green-500 duration-400 ease-in-out font-semibold"
+                        >
+                            Register
+                        </Link>
+                    </li>
+
+
+
+
                 </ul>
 
                 <div className="menulist-icon gap-3 hidden md:block">

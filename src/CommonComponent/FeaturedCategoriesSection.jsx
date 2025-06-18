@@ -5,7 +5,6 @@ import Slider from "react-slick";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import AnimationCard from "../Wrapper Components/AnimationCard";
 
-
 export default function FeaturedCategoriesSection() {
     const { categories, products, loading } = UseDataStrapi();
     const [hoveredCategory, setHoveredCategory] = useState(null);
@@ -15,7 +14,7 @@ export default function FeaturedCategoriesSection() {
         "#f9c2ff", "#c2f9ff", "#ffc2c2", "#d2ffc2", "#c2d4ff", "#ffe6c2"
     ];
 
-    if (loading) return <p>جارٍ تحميل التصنيفات...</p>;
+    if (loading) return <p className="text-center">جارٍ تحميل التصنيفات...</p>;
 
     const categoriesWithCount = categories.map((cat) => {
         const count = products.filter((p) => p.category === cat.title).length;
@@ -34,68 +33,68 @@ export default function FeaturedCategoriesSection() {
         slidesToScroll: 1.5,
         arrows: false,
         responsive: [
+            { breakpoint: 1024, settings: { slidesToShow: 3 } },
             { breakpoint: 768, settings: { slidesToShow: 2 } },
             { breakpoint: 480, settings: { slidesToShow: 1 } },
         ],
     };
 
     return (
-        <section className="my-20 px-4">
-            <div className=" flex  justify-between m-10">
-                <div className="flex gap-10 ">
-                <h1 className="text-4xl font-bold">Featured Categories</h1>
-            
-                {/* قائمة المجموعات  + الازرار  */}
-         
-                {/* أسماء المجموعات   */}
-                <div className="flex-1 flex justify-center gap-10 items-end ">
-                        {categoriesWithCount.slice(0, 5).map((cat) => (
+        <section className="my-16 px-2 sm:px-1">
+            {/* العنوان + الأزرار + التصنيفات */}
+            <div className="flex  flex-row justify-between items-center gap-6 mb-10">
+                {/* العنوان */}
+                <h1 className="text-3xl md:text-4xl  font-bold text-center lg:text-left">
+                    Featured Categories
+                </h1>
+
+                {/* أسماء المجموعات */}
+                <div className="flex flex-wrap justify-center lg:gap-4 gap-2">
+                    {categoriesWithCount.slice(0, 5).map((cat) => (
                         <button
                             key={cat.id}
                             onMouseEnter={() => setHoveredCategory(cat.title)}
                             onMouseLeave={() => setHoveredCategory(null)}
-                            className={`text-md text-gray-200 font-semibold  cursor-pointer transition-colors duration-300 ${hoveredCategory === cat.title
-                                ? "text-gray-800  hover:text-green-600 hover:text-bold "
-                                    : "text-gray-800 hover:text-green-800 hover:text-bold  "
+                            className={`text-sm md:text-base font-semibold transition-colors duration-300 ${hoveredCategory === cat.title
+                                    ? "text-green-600"
+                                    : "text-gray-700 hover:text-green-800"
                                 }`}
                         >
                             {cat.title}
                         </button>
                     ))}
-                    </div>
                 </div>
-                    
-                {/* أزرار التنقل  */}
-                <div className="flex gap-5 ml-4">
+
+                {/* أزرار التنقل */}
+                <div className="flex gap-3">
                     <button
                         onClick={() => sliderRef.current?.slickPrev()}
-                        className="p-3  bg-gray-300 text-gray-500  rounded-full hover:bg-green-600 hover:text-white transition"
+                        className="p-2 md:p-3 bg-gray-300 text-gray-600 rounded-full hover:bg-green-600 hover:text-white transition"
                     >
-                        {<FaArrowLeft />}
+                        <FaArrowLeft />
                     </button>
                     <button
                         onClick={() => sliderRef.current?.slickNext()}
-                        className="p-3 bg-gray-300 text-gray-500 rounded-full hover:bg-green-600 hover:text-white transition"
+                        className="p-2 md:p-3 bg-gray-300 text-gray-600 rounded-full hover:bg-green-600 hover:text-white transition"
                     >
-                        {<FaArrowRight/>}
+                        <FaArrowRight />
                     </button>
                 </div>
             </div>
 
             {/* السلايدر */}
-            <Slider ref={sliderRef} {...settings}>
+            <Slider className="!overflow-hidden" ref={sliderRef} {...settings}>
                 {categoriesWithCount.map((category, index) => {
                     const bgColor = colors[index % colors.length];
                     const isActive = hoveredCategory === category.title;
                     return (
                         <AnimationCard key={category.id} index={index}>
-                        <FeaturedCategoryCard
-                            key={category.id}
-                            title={category.title}
-                            image={category.image}
-                            count={category.count}
-                            bgColor={bgColor}
-                            isActive={isActive}
+                            <FeaturedCategoryCard
+                                title={category.title}
+                                image={category.image}
+                                count={category.count}
+                                bgColor={bgColor}
+                                isActive={isActive}
                             />
                         </AnimationCard>
                     );
